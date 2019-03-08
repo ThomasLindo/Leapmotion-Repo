@@ -11,14 +11,17 @@ public class RaycastScript : MonoBehaviour
     {
         RaycastHit hit;
         Ray raycast = new Ray(transform.position, transform.forward);
-        if (Physics.Raycast(raycast, out hit, 100000000.0f))
+        if (PalmTracker.GetComponent<ClickScript>().LClick || PalmTracker.GetComponent<ClickScript>().RClick)
         {
-            if (hit.transform != null)
+            if (Physics.Raycast(raycast, out hit, 100000000.0f))
             {
-                if (hit.transform.tag == "Button")
+                if (hit.transform != null)
                 {
-                    Debug.Log("that's a button");
-                    hit.transform.GetComponent<Button>().onClick.Invoke();
+                    if (hit.transform.tag == "Button")
+                    {
+                        Debug.Log("that's a button");
+                        hit.transform.GetComponent<Button>().onClick.Invoke();
+                    }
                 }
             }
         }

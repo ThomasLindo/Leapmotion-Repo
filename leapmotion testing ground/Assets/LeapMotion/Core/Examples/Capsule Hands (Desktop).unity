@@ -2211,6 +2211,7 @@ GameObject:
   - component: {fileID: 1367903708}
   - component: {fileID: 1367903711}
   - component: {fileID: 1367903713}
+  - component: {fileID: 1367903714}
   m_Layer: 5
   m_Name: Button
   m_TagString: Button
@@ -2277,7 +2278,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1367903709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1367903714}
+        m_MethodName: ClickFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1367903709
@@ -2358,6 +2370,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1367903714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367903706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb3028bcfa396324d8a6528ec98fc092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PalmTracker: {fileID: 313195730}
 --- !u!1001 &1476619789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2675,8 +2700,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1618585133}
-  - component: {fileID: 1618585132}
   - component: {fileID: 1618585134}
+  - component: {fileID: 1618585132}
   m_Layer: 0
   m_Name: Ray
   m_TagString: Untagged
@@ -2724,7 +2749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca226e23adae92429d4588a7a31b8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PalmTracker: {fileID: 0}
+  PalmTracker: {fileID: 313195730}
 --- !u!1 &1672532512 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 159660, guid: c8515ebee271c0649b9db1321f3026a4,
