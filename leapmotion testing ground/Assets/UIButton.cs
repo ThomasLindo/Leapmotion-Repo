@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-//put this script on any buttons you want to be clickable in vr!
-//don't forget to give your button the "button" tag as well!!!
+
 [RequireComponent(typeof(RectTransform))]
 public class UIButton : MonoBehaviour
 {

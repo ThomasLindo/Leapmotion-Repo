@@ -17,24 +17,24 @@ public class ClickScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("pootis");
+        
         if (collision.gameObject.tag == "Thumb")
         {
             if (!RClickState)
             {
                 RClick = true;
-                Debug.Log("Right Clcik");
+               
             }
             else
             {
                 LClick = true;
-                Debug.Log("Left Clcik");
+                
             }
         }
         if (collision.gameObject.tag == "MiddleF")
         {
             RClickState = true;
-            Debug.Log("left click mode on!");
+          
         }
        
     }
@@ -45,13 +45,13 @@ public class ClickScript : MonoBehaviour
         {
             RClick = false;
             LClick = false;
-            Debug.Log("no longer clicking");
+           
         }
 
         if (collision.gameObject.tag == "MiddleF")
         {
             RClickState = false;
-            Debug.Log("right click mode on!");
+           
         }
 
     }
