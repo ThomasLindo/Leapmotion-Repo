@@ -11,6 +11,6 @@ public class Track : MonoBehaviour
     void Update()
     {
         GetComponent<Transform>().position = Tracking.GetComponent<Transform>().position;
-        GetComponent<Transform>().rotation = Tracking.GetComponent<Transform>().rotation;
+       
     }
 }
